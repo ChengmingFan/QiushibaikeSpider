@@ -58,6 +58,7 @@ public class JokeAdapter extends BaseAdapter {
             viewHolder.content = (TextView)view.findViewById(R.id.content);
             viewHolder.content.setTextColor(Color.BLACK);
             viewHolder.userImage = (CircleImageView)view.findViewById(R.id.user_image);
+            viewHolder.picture = (ImageView)view.findViewById(R.id.picture);
             view.setTag(viewHolder);
         }else{
             view = convertView;
@@ -66,6 +67,7 @@ public class JokeAdapter extends BaseAdapter {
         viewHolder.userName.setText(jokeList.get(position).getUserName());
         viewHolder.content.setText(jokeList.get(position).getContent());
         Glide.with(mContext).load(jokeList.get(position).getUserImageUrl()).into(viewHolder.userImage);
+        Glide.with(mContext).load(jokeList.get(position).getPictureUrl()).into(viewHolder.picture);
         return view;
     }
 
@@ -73,5 +75,6 @@ public class JokeAdapter extends BaseAdapter {
         CircleImageView userImage;
         TextView userName;
         TextView content;
+        ImageView picture;
     }
 }

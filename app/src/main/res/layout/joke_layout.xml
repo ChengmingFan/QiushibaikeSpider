@@ -24,5 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

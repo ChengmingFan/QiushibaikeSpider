@@ -8,11 +8,13 @@ public class Joke {
     private String userName;
     private String userImageUrl;
     private String content;
+    private String pictureUrl;
 
-    public Joke(String userName,String userImageUrl,String content){
+    public Joke(String userName,String userImageUrl,String content,String pictureUrl){
         this.userName = userName;
         this.userImageUrl = userImageUrl;
         this.content = content;
+        this.pictureUrl = pictureUrl;
     }
 
     public String getUserName() {
@@ -37,5 +39,13 @@ public class Joke {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
     }
 }
