@@ -51,12 +51,11 @@ public class MainActivity extends AppCompatActivity {
                     for(int i = 1;i < 5;i++){
                         Document doc = Jsoup.connect("https://www.qiushibaike.com/8hr/page/" + i + "/").get();
                         Elements userDetails = doc.select(".author").select(".clearfix");
-                        Log.d("test", userDetails.toString());
                         Elements contents = doc.select("div.content");
                         for(int j = 0;j < contents.size();j++){
-                            String nameUrl = userDetails.get(j).select("a").select("img").attr("src");
-                            String nameText = userDetails.get(j).select("a").select("img").attr("alt");
-                            Log.d("test1", nameText);
+                            String nameUrl = "http:" + userDetails.get(j).select("img").attr("src");
+                            String nameText = userDetails.get(j).select("img").attr("alt");
+                            Log.d("test1", nameUrl);
                             String content = contents.get(j).select("span").text();
 //                            Log.d("test", content );
                             Joke joke = new Joke(nameText,nameUrl,content);
