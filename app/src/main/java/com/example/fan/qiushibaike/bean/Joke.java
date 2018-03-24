@@ -1,0 +1,41 @@
+package com.example.fan.qiushibaike.bean;
+
+/**
+ * Created by Fan on 2018/3/23.
+ */
+
+public class Joke {
+    private String userName;
+    private String userImageUrl;
+    private String content;
+
+    public Joke(String userName,String userImageUrl,String content){
+        this.userName = userName;
+        this.userImageUrl = userImageUrl;
+        this.content = content;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserImageUrl() {
+        return userImageUrl;
+    }
+
+    public void setUserImageUrl(String userImageUrl) {
+        this.userImageUrl = userImageUrl;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+}
